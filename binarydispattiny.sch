@@ -321,7 +321,7 @@ F 3 "" H 4050 2450 50  0001 C CNN
 $EndComp
 Text Label 5200 2050 2    50   ~ 0
 ~RST
-Text GLabel 7200 1950 2    50   Output ~ 0
+Text GLabel 7400 1950 2    50   Output ~ 0
 SEL_OUT
 Text GLabel 6000 5500 0    50   Input ~ 0
 SEL_OUT
@@ -407,7 +407,7 @@ Wire Wire Line
 Text GLabel 6750 2150 2    50   Input ~ 0
 INDATA
 Wire Wire Line
-	7200 1950 7100 1950
+	7400 1950 7250 1950
 Text GLabel 1900 3800 0    50   Input ~ 0
 SHARED_CLK
 Wire Wire Line
@@ -431,10 +431,10 @@ Wire Wire Line
 	5750 3650 6600 3650
 Wire Wire Line
 	1900 4100 2150 4100
-Text GLabel 7200 2050 2    50   Output ~ 0
+Text GLabel 7400 2050 2    50   Output ~ 0
 SEL_IN
 Wire Wire Line
-	7200 2050 7100 2050
+	7400 2050 7250 2050
 $Comp
 L power:PWR_FLAG #FLG0101
 U 1 1 5EB07DA8
@@ -544,8 +544,6 @@ Wire Wire Line
 Wire Wire Line
 	7100 1850 7100 1950
 Connection ~ 7100 1950
-Wire Wire Line
-	7100 1950 6600 1950
 $Comp
 L Device:R R5
 U 1 1 5EB57A65
@@ -708,14 +706,11 @@ Wire Wire Line
 	4600 1650 4600 1850
 Connection ~ 4600 1850
 Wire Wire Line
-	4600 1850 5400 1850
-Text GLabel 4950 1650 2    50   Output ~ 0
+	4600 1850 4850 1850
+Text GLabel 5150 1650 2    50   Output ~ 0
 TPIDATA
 Wire Wire Line
-	4950 1650 4950 1950
-Connection ~ 4950 1950
-Wire Wire Line
-	4950 1950 5400 1950
+	5150 1650 5150 1950
 Text GLabel 9550 1500 2    50   Input ~ 0
 TPIDATA
 Wire Wire Line
@@ -733,7 +728,7 @@ Wire Wire Line
 Wire Wire Line
 	4550 2050 5400 2050
 Wire Wire Line
-	4550 1950 4950 1950
+	4550 1950 4700 1950
 Wire Wire Line
 	4550 1850 4600 1850
 Wire Wire Line
@@ -746,8 +741,6 @@ Wire Wire Line
 Wire Wire Line
 	7100 2250 7100 2050
 Connection ~ 7100 2050
-Wire Wire Line
-	7100 2050 6600 2050
 Wire Wire Line
 	7000 4100 7350 4100
 Wire Wire Line
@@ -1038,4 +1031,79 @@ Wire Wire Line
 Wire Wire Line
 	10150 1350 10150 1450
 Connection ~ 9250 1350
+$Comp
+L Connector:TestPoint TP1
+U 1 1 5EDCDBBA
+P 4850 1850
+F 0 "TP1" H 4850 1800 50  0000 L CNN
+F 1 "TestPoint" H 4700 1900 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_1.0x1.0mm" H 5050 1850 50  0001 C CNN
+F 3 "~" H 5050 1850 50  0001 C CNN
+	1    4850 1850
+	1    0    0    -1  
+$EndComp
+Connection ~ 4850 1850
+Wire Wire Line
+	4850 1850 5400 1850
+$Comp
+L Connector:TestPoint TP2
+U 1 1 5EDCF7C4
+P 4700 1950
+F 0 "TP2" H 4750 1900 50  0000 R CNN
+F 1 "TestPoint" H 4850 2000 50  0000 R CNN
+F 2 "TestPoint:TestPoint_Pad_1.0x1.0mm" H 4900 1950 50  0001 C CNN
+F 3 "~" H 4900 1950 50  0001 C CNN
+	1    4700 1950
+	-1   0    0    1   
+$EndComp
+Connection ~ 4700 1950
+Wire Wire Line
+	4700 1950 5150 1950
+$Comp
+L Connector:TestPoint TP5
+U 1 1 5EDCFFAA
+P 7250 1950
+F 0 "TP5" H 7308 2068 50  0000 L CNN
+F 1 "TestPoint" H 7200 2150 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_1.0x1.0mm" H 7450 1950 50  0001 C CNN
+F 3 "~" H 7450 1950 50  0001 C CNN
+	1    7250 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint TP4
+U 1 1 5EDD0674
+P 7250 2050
+F 0 "TP4" H 7200 2150 50  0000 R CNN
+F 1 "TestPoint" H 7300 2250 50  0000 R CNN
+F 2 "TestPoint:TestPoint_Pad_1.0x1.0mm" H 7450 2050 50  0001 C CNN
+F 3 "~" H 7450 2050 50  0001 C CNN
+	1    7250 2050
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector:TestPoint TP3
+U 1 1 5EDD0C6B
+P 6600 2150
+F 0 "TP3" H 6650 2350 50  0000 R CNN
+F 1 "TestPoint" H 6542 2267 50  0000 R CNN
+F 2 "TestPoint:TestPoint_Pad_1.0x1.0mm" H 6800 2150 50  0001 C CNN
+F 3 "~" H 6800 2150 50  0001 C CNN
+	1    6600 2150
+	-1   0    0    1   
+$EndComp
+Connection ~ 6600 2150
+Connection ~ 7250 1950
+Wire Wire Line
+	7250 1950 7100 1950
+Wire Wire Line
+	6600 1950 7100 1950
+Connection ~ 7250 2050
+Wire Wire Line
+	7250 2050 7100 2050
+Wire Wire Line
+	6600 2050 7100 2050
+Connection ~ 5150 1950
+Wire Wire Line
+	5150 1950 5400 1950
 $EndSCHEMATC
